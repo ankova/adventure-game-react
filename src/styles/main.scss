@@ -1,0 +1,200 @@
+@import "../../node_modules/bootstrap/dist/css/bootstrap.css";
+
+$BG: #D2D8AB;
+$border-color: #000000;
+
+$screen-sm-min: 768px;
+$screen-md-min: 992px;
+$screen-lg-min: 1200px;
+
+
+#mainContent {
+    .show-total {
+        text-align: center;
+
+        span {
+            margin-right: 1em;
+            display: inline-block;
+        }
+    }
+
+    .form-control {
+        width: 37%;
+        height: 31px;
+        padding: 0;
+    }
+    .captured {
+        top: 2em;
+        position: relative;
+
+        .cage {
+            display: inline-block;
+            width: 46%;
+            height: 155px;
+            background-color: lightgray;
+            border: 3px solid darkgray;
+            border-radius: 10px;
+            position: relative;
+            margin: 2%;
+
+            div {
+                margin-top: 2.4em;
+            }
+
+            .creature-name {
+                font-size: 2em;
+                height: 80px;
+            }
+            .creature-details {
+                top: -1.4em;
+                position: relative;
+                background-color: darkgray;
+                //border-radius: 0 0 10px 10px;
+                padding: 0.5em;
+
+                .age, .mana {
+                    display: inline-block;
+                    text-align: center;
+                    font-size: 0.8em;
+
+                    span:first-of-type {
+                        font-weight: bold;
+                    }
+                }
+                .mana {
+                    margin-left: 0.5em;
+                }
+            }
+
+            button {
+                position: relative;
+                left: 50%;
+                top: -2.5em;
+                padding: 4px 6px;
+                font-size: 0.9em;
+                border: 1px solid darkgray;
+            }
+
+            .releasing {
+                width: 100%;
+                height: 117px;
+                position: absolute;
+                top: 0;
+                left: 0;
+                margin-top: 0;
+                z-index: 100;
+                background: url("../assets/25.gif") center no-repeat lightgray;
+                border-radius: 10px 10px 0 0;
+            }
+        }
+    }
+    .catch {
+        text-align: center;
+        position: relative;
+        height: 85px;
+
+        .btn {
+            position: absolute;
+            top: 1.5em;
+            left: 37%;
+        }
+        .add-name {
+            position: relative;
+            width: 40%;
+            
+            span {
+                display: block;
+                margin-bottom: 0.35em;
+            }
+            .form-control {
+                width: 67%;
+            }
+        }
+        .form-control {
+            display: inline-block;
+        }
+    }
+    .sort {
+        text-align: right;
+
+        span {
+            display: block;
+        }
+        .form-control {
+            display: inline-block;
+        }
+    }
+}
+
+
+/* Small devices (tablets, 768px and up) */
+@media screen and (min-width: $screen-sm-min) {
+    #mainContent {
+        .form-control {
+            width: 20%;
+            height: 31px;
+        }
+        .captured {
+            .cage {
+                //margin: 2%;
+                width: 29%;
+
+                .creature-details {
+                    top: -2em;
+                    position: relative;
+                    background-color: darkgray;
+                    border-radius: 0 0 10px 10px;
+                    padding: 0.5em;
+
+                    .age, .mana {
+                        display: inline-block;
+                        text-align: center;
+
+                        span:first-of-type {
+                            font-weight: bold;
+                        }
+                    }
+                    .mana {
+                        margin-left: 4.5em;
+                    }
+                }
+
+                button {
+                    position: relative;
+                    left: 80%;
+                    top: -4.5em;
+                    padding: 4px 6px;
+                    font-size: 0.9em;
+                    border: 1px solid darkgray;
+                }
+
+                div {
+                    margin-top: 3.75em;
+                }
+            }
+        }
+        .catch {
+            .btn {
+                left: 45%;
+            }
+            .add-name {
+                position: relative;
+                width: 70%;
+
+                span {
+                    display: block;
+                    margin-bottom: 0.35em;
+                }
+                .form-control {
+                    width: 20%;
+                }
+            }
+        }
+    }
+}
+
+/* Medium devices (desktops, 992px and up) */
+@media screen and (min-width: $screen-md-min) { }
+
+/* Large devices (large desktops, 1200px and up) */
+@media screen and (min-width: $screen-lg-min) {  }
